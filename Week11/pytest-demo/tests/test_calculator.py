@@ -18,6 +18,10 @@ def test_divide_by_zero():
         divide(10, 0)
 
 def test_prime():
-#    #n = 3
     assert prime(5) == True
+
+
+
+
+
 
