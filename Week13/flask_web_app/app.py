@@ -17,15 +17,15 @@ def bye():
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('fname')
-    if name:
-        return redirect(url_for('welcome', name=name))
+    age = request.form.get('fage')
+    if name and age:
+        return redirect(url_for('welcome', name=name, age=age))
     return redirect(url_for('home'))
 
 
-@app.route('/<name>')
-def welcome(name):
-    return f'{name}, welcome back'
-
+@app.route('/<name>/<age>')
+def welcome(name, age):
+    return f'{name}({age})age, welcome back'
 
 
 if __name__ == '__main__':
