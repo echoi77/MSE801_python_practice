@@ -8,3 +8,6 @@ document.getElementById('alertBtn1').addEventListener('click', function() {
     alert('Bye from JavaScript!');
 });
 
+document.getElementById('alertBtn2').addEventListener('click', function() {
+    alert('next page');
+});
